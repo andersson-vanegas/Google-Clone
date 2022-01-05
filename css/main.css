@@ -1,0 +1,152 @@
+body
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+    cursor: pointer; /* al pasar el mouse por el texto el cursor se convertira en una manita */
+}
+header
+{
+    width: 100%;
+    height: 60px;
+}
+header nav{
+    display: flex;
+    justify-content:flex-end ; /* esto nos permite que mandemos el texto de un lado, o al centro */
+}
+header nav .nav-right-section{
+    width: 250px;
+    height: auto; /* si el padre es mas alto, va a tomar de forma automatica la altura de este */
+    display: flex;
+    list-style: none; /* esto quitara los estilos por defecto de las listas */
+    justify-content: center; /* centrara el contenido */
+    align-items: center;  
+}
+nav .nav-right-section a{
+    margin-right: 10px;
+    color: black;
+}
+nav .nav-right-section .menu-icon{
+    background-image: url('https://static.thenounproject.com/png/756729-200.png');
+    background-repeat: no-repeat; /* esto evitara que la imagen se repita */
+    background-position: center;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+}
+nav .nav-right-section img{
+    border-radius: 50%;
+    margin-left: 10px;
+}
+main{
+    margin-top:150px;
+    text-align: center;
+}
+main  .main-logo{
+    width: 530px;
+    margin: 0 auto; /* esto permitira que no se mueva de arriba a abajo, pero sera flexible de ambos lados */
+    margin-bottom: 35px;
+}
+main .main-logo img{
+    width: 350px;
+    height: 120px;
+}
+main .main-input{
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 35px ;
+}
+main .main-input-container{
+    width: 525px;
+    border-radius: 100px;
+    border: 1px solid #dfe1e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .main-input input{
+    width: 450px;
+    height: 40px;
+    border:none;
+    outline: none;
+}
+main .main-input-container:hover{
+    box-shadow: 0 1px 6px #20212447;
+    border-color: #dfe1e500;
+}
+main .main-input .search-icon{
+    background-image: url('https://img.icons8.com/android/24/000000/search.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+}
+main .main-input .micro-icon{
+      background-image: url('https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+main .main-buttons{
+    width: 530px;
+    margin: 0 auto;
+}
+main .main-buttons div{
+    display: inline-block;
+}
+main .main-buttons button{
+    height: 36px;
+    background-color: #f2f2f2;
+    border: 0;
+    font-size: 14px;
+    color: #5f6368 ;
+    border-radius: 5px;
+    margin-right: 15px;
+    padding: 0 15px; /* espacio interno */
+}
+main .main-buttons button:hover{
+    border: 1px solid #c6c6c6;
+    box-shadow: 0px 1px 1px
+    rgba(0,0,0,0,1);
+        color: #222;
+        background-color: #f8f8f8;
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0; /* con las dos ultimas, nos aseguramos que el footer se mantenga siempre abajo de la pagina */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    font-size: 13px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+}
+footer ul{
+    margin: 10px;
+    list-style: none;
+    display: flex; /* nos ayuda a acomodar el contenido de forma horizontal */
+    padding-left: 0; /* reseteamos el padding del navegador */
+}
+footer .footer-left{
+    justify-content: left;
+}
+footer .footer-right{
+    justify-content: right;
+}
+footer ul li a{
+    margin: 10px;
+    color: #5f6368;
+}
+/* el grid nos ayuda a posicionar las etiquetas contenedoras, y el flex nos ayuda a acomodarlas dentro de estas */
